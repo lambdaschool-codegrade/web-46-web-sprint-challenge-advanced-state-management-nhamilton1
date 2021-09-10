@@ -10,6 +10,7 @@ import { connect } from 'react-redux';
         return <h1>Loading...</h1>;
     }
 
+
     return(
     <div className="listContainer">
         {
