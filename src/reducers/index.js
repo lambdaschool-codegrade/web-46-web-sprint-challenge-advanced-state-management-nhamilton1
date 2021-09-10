@@ -17,7 +17,7 @@ export const initialState = {
             id: ''
         }
     ],
-    isFetching: false,
+    isLoading: false,
     error: ''
 }
 
@@ -27,21 +27,21 @@ const reducer = (state = initialState, action ) => {
             return ({
             ...state,
             smurfs: [],
-            isFetching: true,
+            isLoading: true,
             error: '',
         })
         case(FETCH_SUCCESS):
             return({
             ...state,
             smurfs: action.payload,
-            isFetching: false,
+            isLoading: false,
             error: '',
         })
         case(FETCH_FAIL):
             return({
             ...state,
             smurfs: [],
-            isFetching: false,
+            isLoading: false,
             error: action.payload,
             })
         case(ADD_SMURF):
